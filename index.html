@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Birthday 🎀</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="flower" viewBox="-50 -50 100 100">
+    <g fill="currentColor" stroke="rgba(190,60,110,.25)" stroke-width="1.5">
+      <ellipse rx="14" ry="34"/><ellipse rx="14" ry="34" transform="rotate(72)"/><ellipse rx="14" ry="34" transform="rotate(144)"/>
+      <ellipse rx="14" ry="34" transform="rotate(216)"/><ellipse rx="14" ry="34" transform="rotate(288)"/>
+    </g>
+    <circle r="9" fill="#ffe9a8"/><circle r="4" fill="#f4b04a"/>
+  </symbol>
+  <clipPath id="heart" clipPathUnits="objectBoundingBox">
+    <path d="M0.5,0.95 C0.1,0.62 0,0.42 0,0.28 C0,0.12 0.12,0 0.27,0 C0.37,0 0.46,0.06 0.5,0.15 C0.54,0.06 0.63,0 0.73,0 C0.88,0 1,0.12 1,0.28 C1,0.42 0.9,0.62 0.5,0.95Z"/>
+  </clipPath>
+</svg>
+
+
+<!-- КОНВЕРТ-ЗАСТАВКА -->
+<div class="gate" id="gate">
+  <div class="gate-stars"></div>
+  <p class="gate-q" id="gateQ">Відкрити сюрприз?</p>
+  <div class="env" id="env">
+    <div class="env-back"></div>
+    <div class="env-letter"><span>♡</span></div>
+    <div class="env-front"></div>
+    <div class="env-flap"><b>♥</b></div>
+  </div>
+  <div class="gate-btns">
+    <button class="btn yes" id="yes">Так 💌</button>
+    <button class="btn no" id="no">Ні</button>
+  </div>
+  <p class="gate-msg" id="gateMsg"></p>
+</div>
+
+<div class="fall" id="fall"></div>
+<button class="replay" id="replay" title="Ще раз">↺</button>
+
+<!-- 1. ПРИВІТАННЯ -->
+<section class="page hero" id="hero">
+  <svg class="flower fl1"><use href="#flower"/></svg>
+  <svg class="flower fl2"><use href="#flower"/></svg>
+  <svg class="flower fl3"><use href="#flower"/></svg>
+  <img class="cap c-wand" src="img/cap-wand.png" alt="">
+  <img class="cap c-crown" src="img/cap-crown.png" alt="">
+  <h1 class="title">
+    <span class="line l1" data-text="Happy"></span>
+    <span class="line l2" data-text="Birthday"></span>
+  </h1>
+  <p class="wish">Wishing you endless happiness, success, and beautiful moments ahead</p>
+  <div class="hint">гортай ↓</div>
+</section>
+
+<!-- 2. ФОТО В СЕРЦІ -->
+<section class="page reveal">
+  <div class="heart-wrap">
+    <svg class="flower fl-a"><use href="#flower"/></svg>
+    <svg class="flower fl-b"><use href="#flower"/></svg>
+    <div class="heart-photo"><img src="img/photo1.jpg" alt="" onerror="this.classList.add('ph')"></div>
+    <span class="sticker s1">with love</span>
+  </div>
+  <p class="caption">найкраща ти ♡</p>
+  <div class="cap-row"><img class="cap c-roses" src="img/cap-roses.png" alt=""></div>
+</section>
+
+<!-- 3. ДВІ ФОТКИ -->
+<section class="page reveal">
+  <div class="duo">
+    <div class="polaroid pa"><i class="tape"></i><img src="img/photo2.jpg" alt="" onerror="this.classList.add('ph')"><span>наші дні</span></div>
+    <div class="polaroid pb"><i class="tape"></i><img src="img/photo3.jpg" alt="" onerror="this.classList.add('ph')"><span>ми з тобою</span></div>
+  </div>
+  <div class="cap-row"><img class="cap c-mirror" src="img/cap-mirror.png" alt=""><img class="cap c-peace" src="img/cap-peace.png" alt=""></div>
+</section>
+
+<!-- 4. ЛИСТ -->
+<section class="page reveal" id="letterSec">
+  <article class="letter">
+    <i class="tape t-l"></i><i class="tape t-r"></i>
+    <p id="letterText"></p>
+  </article>
+  <div class="cap-row"><img class="cap c-couple" src="img/cap-couple.png" alt=""></div>
+</section>
+
+<script src="code.js"></script>
+</body>
+</html>
